@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piemonte</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/stili.css" type="text/css" media="screen">
 </head>
 <body>
-    <div id="wrapper">
+    <div id="wrappe" class="container">
         <!-- Header -->
         <header>
-            <img src="./img/logo-piemonte.png" alt="">
+            <img src="./img/logo-piemonte.png" alt="" class="p-2">
         </header>
-
+        
         <!-- IMPLEMENTAZIONE MENU' RESPONSIVE -->
-        <div class="column-menu">
+        <!-- <div class="column-menu">
             <div class="topnav" id="myTopnav">
                 <a href="index.html" class="active"><strong>Home</strong></a>
                 <a href="#intro"><strong>Chi siamo</strong></a>
@@ -36,43 +37,125 @@
                     }
                 }
             </script>
-        </div>
-
+        </div> -->
+        
+        <!-- Navbar Small -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary d-none small-nav">
+            <div class="container-fluid ms-4">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mt-3" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Piemonte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./alpi.html">Alpi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./lago-maggiore.html">Lago Maggiore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./novara.html">Novara</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
         <!-- Container -->
         <div id="container">
-            <!-- Navbar -->
-            <nav>
+            <!-- Navbar Big -->
+            <nav class="big-nav">
                 <ul>
                     <li><a href="./index.html">Piemonte</a></li>
                     <li><a href="./alpi.html">Alpi</a></li>
                     <li><a href="./lago-maggiore.html">Lago Maggiore</a></li>
                     <li><a href="./novara.html">Novara</a></li>
+                    <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a> -->
                 </ul>
             </nav>
-
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                }
+            </script>
+            
             <!-- Main -->
-            <main>
+            <main class="big-main">
                 <h1>Piemonte</h1>
                 <h2>Sottotitolo</h2>
-                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt commodi cum saepe, id nostrum vitae, dicta tempore maiores pariatur inventore atque deserunt corporis dolorem provident porro consectetur animi, iusto sapiente. Libero quos reiciendis culpa eaque asperiores explicabo saepe commodi, beatae id veniam numquam similique dolore odio veritatis quo rem?</h3>
-
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt commodi cum saepe, id nostrum vitae, dicta tempore maiores pariatur inventore atque deserunt corporis dolorem provident porro consectetur animi, iusto sapiente. Libero quos reiciendis culpa eaque asperiores explicabo saepe commodi, beatae id veniam numquam similique dolore odio veritatis quo rem?</p>
+                
                 <figure>
                     <img src="./img/cupola-novara.jpg" alt="">
-
                     <figcaption>
                         Cupola di Novara
                     </figcaption>
                 </figure>
-
+                
+                <hr>
+                
+                <h1>Mappa della Regione</h1>
+                <h2>Sottotitolo</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt commodi cum saepe, id nostrum vitae, dicta tempore maiores pariatur inventore atque deserunt corporis dolorem provident porro consectetur animi, iusto sapiente. Libero quos reiciendis culpa eaque asperiores explicabo saepe commodi, beatae id veniam numquam similique dolore odio veritatis quo rem?</p>
+                <figure>
+                    <img src="./img/mappa-piemonte.jpg" alt="">
+                    
+                    <figcaption>
+                        Mappa del Piemonte
+                    </figcaption>
+                </figure>
+                
                 <hr>
             </main>
         </div>
-
+        
+        <div class="small-main d-none">
+            <div class="p-3">
+                <h1>Piemonte</h1>
+                <h2>Sottotitolo</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt commodi cum saepe, id nostrum vitae, dicta tempore maiores pariatur inventore atque deserunt corporis dolorem provident porro consectetur animi, iusto sapiente. Libero quos reiciendis culpa eaque asperiores explicabo saepe commodi, beatae id veniam numquam similique dolore odio veritatis quo rem?</p>
+                <!-- <img src="./img/cupola-novara.jpg" alt=""> -->
+                <div>
+                    <img src="./img/cupola-novara.jpg" alt="">
+                    <figcaption>
+                        Cupola di Novara
+                    </figcaption>
+                </div>
+            </div>
+            <div class="p-3">
+                <h1>Mappa del Piemonte</h1>
+                <h2>Sottotitolo</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt commodi cum saepe, id nostrum vitae, dicta tempore maiores pariatur inventore atque deserunt corporis dolorem provident porro consectetur animi, iusto sapiente. Libero quos reiciendis culpa eaque asperiores explicabo saepe commodi, beatae id veniam numquam similique dolore odio veritatis quo rem?</p>
+                <!-- <img src="./img/cupola-novara.jpg" alt=""> -->
+                <div>
+                    <img src="./img/mappa-piemonte.jpg" alt="">
+                    <figcaption>
+                        Cupola di Novara
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+        
         <!-- Footer -->
         <footer>
             <p>paragrafo 1</p>
             <p>paragrafo 2</p>
         </footer>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/jquery-3.7.1.js"></script>
 </body>
 </html>
